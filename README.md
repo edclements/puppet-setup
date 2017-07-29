@@ -32,11 +32,11 @@ Bootstrap
 Run the following commands to setup your server.
 
     apt-get install git -y
-    git clone https://github.com/pgassmann/puppet-setup.git
+    git clone https://github.com/edclements/puppet-setup.git
     cd puppet-setup
     ./setup.sh
     # or
-    FACTER_custom_role=owncloud ./setup.sh
+    FACTER_custom_role=workstation ./setup.sh
 
 How it works
 ------------
