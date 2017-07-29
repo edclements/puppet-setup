@@ -1,5 +1,15 @@
 class users {
 
+  file { '/home/ed':
+    ensure => 'directory'
+  }
+
+  $groups = ['wheel', 'audio', 'power']
+
+  group { $groups:
+    ensure => 'present'
+  }
+
   group { 'ed':
     ensure => 'present',
     gid => 1050
@@ -9,12 +19,14 @@ class users {
     shell => '/bin/bash',
     uid => 1050,
     gid => 'ed',
-    groups => ['wheel','audio','power'],
+    groups => $groups,
     home => '/home/ed',
-    managehome => true
+    managehome => true,
+    require => [File['/home/ed'], Group[$groups]],
   }
   file { '/home/ed/src':
-    ensure => 'directory'
+    ensure => 'directory',
+    require => File['/home/ed'],
   }
 
   vcsrepo { '/home/ed/src/vimfiles':
