@@ -26,6 +26,7 @@ forge "https://forgeapi.puppetlabs.com"
 
 mod 'edc-packages', :path => './local_modules/packages'
 mod 'edc-users', :path => './local_modules/users'
+mod 'edc-bookingbug', :path => './local_modules/bookingbug'
 
 mod 'puppetlabs-vcsrepo'
 

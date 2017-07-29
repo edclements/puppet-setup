@@ -11,5 +11,5 @@ $role = hiera('role', $::custom_role)
 
 node default {
   hiera_include('classes', [])
-  hiera_resources('additional_resources', {})
+#  hiera_resources('additional_resources', {})
 }

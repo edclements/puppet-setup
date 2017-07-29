@@ -4,6 +4,11 @@ FORGE
     puppetlabs-vcsrepo (2.0.0)
 
 PATH
+  remote: ./local_modules/bookingbug
+  specs:
+    edc-bookingbug (0.0.1)
+
+PATH
   remote: ./local_modules/packages
   specs:
     edc-packages (0.0.1)
@@ -14,6 +19,7 @@ PATH
     edc-users (0.0.1)
 
 DEPENDENCIES
+  edc-bookingbug (>= 0)
   edc-packages (>= 0)
   edc-users (>= 0)
   puppetlabs-vcsrepo (>= 0)
