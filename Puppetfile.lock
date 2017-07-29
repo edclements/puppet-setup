@@ -1,0 +1,20 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    puppetlabs-vcsrepo (2.0.0)
+
+PATH
+  remote: ./local_modules/packages
+  specs:
+    edc-packages (0.0.1)
+
+PATH
+  remote: ./local_modules/users
+  specs:
+    edc-users (0.0.1)
+
+DEPENDENCIES
+  edc-packages (>= 0)
+  edc-users (>= 0)
+  puppetlabs-vcsrepo (>= 0)
+
